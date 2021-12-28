@@ -1,9 +1,9 @@
 import Card from '../UI/Card';
-import sex from './UsersList.module.css';
+import style from './UsersList.module.css';
 
 const UsersList = (props) => {
   return (
-    <Card sx={sex.users}>
+    <Card sexyLook={style.users}>
       <ul>
         {props.users.map((user) => (
           <li key={user.id}>

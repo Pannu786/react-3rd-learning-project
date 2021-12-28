@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import ErrorModal from '../UI/ErrorModal';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
 
@@ -29,7 +30,8 @@ const AddUser = (props) => {
   const ageChangeHandler = (e) => {
     setEnteredAge(e.target.value);
   };
-  return (
+  return (<div>
+    <ErrorModal title='An error occured' msg="Something isn't right"/>
     <Card sexyLook={style.input}>
       <form onSubmit={addUserHandler}>
         <label htmlFor='username'>Username</label>
@@ -49,7 +51,9 @@ const AddUser = (props) => {
         <Button type='submit'>Add User</Button>
       </form>
     </Card>
+  </div>
   );
+  
 };
 
 export default AddUser;
